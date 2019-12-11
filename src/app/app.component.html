@@ -1,0 +1,64 @@
+<div id="bg" class="col-md-12">
+  <b>
+    <span class="site-name">FASCET</span>
+  </b>
+</div>
+<div class="sidenav">
+  <div class="align">
+    <i id="icon" class='fa fa-users'></i>
+  </div>
+</div>
+<div class="main">
+    <div class="col-md-12" id="border-below">
+      <!-- <div   [ngClass]="{'userInprog': inprogrssFlag==true,
+          'usercompleted': completedFlag==true,     
+          'userNotstart': notStartedFlag==true }" >
+              -->
+              <!-- <div >
+        <i  id="icon"  class='fa fa-user'  [ngClass]="{'userInprog': inprogrssFlag==true,
+        'usercompleted': completedFlag==true,     
+        'userNotstart': notStartedFlag==true }"></i> <span class="useName"> {{userName}} </span> 
+
+            </div> -->
+            <div  id="userNotstart" *ngIf="notStartedFlag">
+                <i    id="icon" class='fa fa-user'></i>    <span class="useName"> {{userName}} </span> 
+              </div>      
+      <div  id="userInprog" *ngIf="inprogrssFlag">
+          <i    id="icon" class='fa fa-user'></i>    <span class="useName"> {{userName}} </span> 
+        </div>
+        <div id="usercompleted"  *ngIf="completedFlag" >
+            <i  id="icon" class='fa fa-user'></i>    <span class="useName"> {{userName}} </span> 
+          </div>
+    </div>
+  <div class="container">
+    <ngb-tabset  #ctdTabset="ngbTabset" type="pills" (click)="changeTab($event.srcElement.id)">  {{numbertask}}
+      <ngb-tab  id ={{tab.index}} *ngFor="let tab of tabs;index as ii" title={{tab.name+tab.counter[ii]}}   >
+      
+        <ng-template ngbTabContent >
+                      <table class="table table-striped">
+            <tbody class="tbl">
+              <tr *ngFor="let country of ticketDetails; index as i">
+                <td>
+                  <span [ngClass]="{'busy' : country.status == '1',
+                                    'idle' : country.status == '2',
+                                    'overload' : country.status == '3'
+                           }"></span> {{ country.description }} 
+                </td>
+                <td>
+                  <select [ngClass]="{'comp' : country.status == '1',
+                  'inprog' : country.status == '2',
+                  'notStart' : country.status == '3'
+         }" (change)="dropdownChange( $event,i)">
+                    <option *ngFor="let cont of dropdownVal;index as ii" [selected]="cont.id=== country.status">{{cont.name}}</option>
+                  </select>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </ng-template>
+
+      </ngb-tab>
+    </ngb-tabset>
+
+  </div>
+</div>

@@ -1,0 +1,113 @@
+
+ #bg{
+  background: lightgray;
+  padding: 5px;
+  }
+.sidenav {
+      height: 100%;
+      width: 45px;
+      position: absolute;
+      z-index: 1;
+      top: 34px;
+      left: 0;
+      background-color: lightgray;
+      overflow-x: hidden;
+    //  padding-top: 20px;
+    }
+    .btn {
+  padding: 0px;  
+  }
+    .align{
+      text-align: center;
+      background: white;
+      width: 42px;
+      padding: 7px;
+    #icon{
+      font-size:24px;
+      color:rgb(33, 122, 196);
+    }
+  }
+.main{
+  margin-left: 50px; /* Same as the width of the sidenav */
+font-size: 14px; /* Increased text to enable scrolling */
+padding: 0px 10px;
+  .container{
+    margin-top: 2px;
+  }
+}
+.busy {
+height: 10px;
+width: 10px;
+//background-color: green;
+border-radius: 10%;
+display: inline-block;
+background-color: green;
+}
+.idle {
+height: 10px;
+width: 10px;
+//background-color: green;
+border-radius: 10%;
+display: inline-block;
+background-color: #007bff;
+}
+
+.overload {
+height: 10px;
+width: 10px;
+//background-color: green;
+border-radius: 10%;
+display: inline-block;
+background-color: red;
+}
+.comp{
+background-color: green;
+border-radius: 5px;
+color: white;
+}
+.inprog{
+background-color: #007bff;
+border-radius: 5px;
+color: white;
+}
+.notStart{
+background-color: red;
+border-radius: 5px;
+color: white;
+}
+#userNotstart{
+font-size:24px;
+color:red;
+}
+#userInprog{
+font-size:24px;
+color:#007bff;
+}
+#usercompleted{
+  font-size:24px;
+  color:rgb(33, 196, 82);
+}
+.useName{
+margin-left: 2%;
+color: black;
+font-weight: bold;
+font-size:24px;
+}
+::ng-deep .nav-pills .nav-link {
+border-radius: .25rem;
+width: 15.8em;
+text-align: center;
+font-weight: 700;
+}
+#border-below{
+margin-left: 1%;
+border-bottom: 1.5px solid black;
+
+}
+.tbl{
+border: 1.5px solid #007bff;
+
+}
+::ng-deep .nav {
+border: 1px solid #007bff;
+}
